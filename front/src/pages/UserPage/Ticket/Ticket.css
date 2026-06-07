@@ -1,0 +1,79 @@
+.send-ticket {
+  width: 60%;
+  margin-top: 30px;
+  border-right: 3px solid var(--primary-color);
+  padding-right: 20px;
+  position: relative;
+}
+
+.send-ticket h1 {
+  font-size: 23px;
+  font-weight: 800;
+}
+.btn-ticket {
+  padding: 5px 20px;
+  color: white;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  /* position: absolute;
+      left: 0; */
+  margin: 10px 0;
+}
+
+.select {
+  width: 100%;
+  height: 35px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+}
+.my-ticket div {
+  padding: 15px 0;
+  font-weight: 600;
+}
+
+.input,
+textarea {
+  width: 100%;
+  height: 35px;
+  border: 2px solid var(--primary-color) !important;
+  border-radius: 5px;
+}
+
+.btntick {
+  display: flex;
+  justify-content: left;
+}
+.ticktick {
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.ticket-input-file {
+  width: 100%;
+  margin: 20px 0px;
+  border: 2px dotted var(--primary-color);
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 10px;
+  background-color: rgb(141, 101, 255, 0.3);
+}
+.ticket-input-file input {
+  padding: 10px 0;
+}
+
+.send-tickets {
+  padding: 5px 20px;
+  color: white;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+}
+
+input.myinput {
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+  border: 2px solid var(--primary-color);
+  padding: 10px;
+  font-size: 12px;
+}

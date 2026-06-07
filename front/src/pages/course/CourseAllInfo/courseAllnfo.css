@@ -1,0 +1,369 @@
+.allinfo {
+  width: 94%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.right {
+  width: 67%;
+  /* background-color: red; */
+  height: auto;
+}
+
+/* .left{
+    width: 31%;
+    height: 1000px;
+   
+} */
+
+.title {
+  font-size: 20px;
+  font-weight: 800;
+  padding: 15px;
+  margin-right: 40px;
+}
+
+.right img {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.myaccardion {
+  width: 90%;
+  height: auto;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 15px auto;
+}
+
+.teacher {
+  width: 90%;
+  height: 400px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 15px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.teacher-right {
+  width: 100%;
+
+  border-left: 2px solid lightgray;
+  height: 100%;
+}
+.teacher-right-text p {
+  text-align: center !important;
+}
+.teacher-right-text {
+  padding-top: 130px;
+}
+.teacher-right p {
+  text-align: center;
+  padding-bottom: 15px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.teacher button {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.work {
+  background: #8d65ff;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+}
+.teacher-left img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.title-p {
+  width: 90% !important;
+  margin: 0 auto !important;
+  text-align: justify;
+}
+.teacher-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.teacher-intro {
+  text-align: justify;
+  padding: 10px 20px;
+}
+
+.moshavereh {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border: 10px solid var(--primary-color);
+  border-radius: 10px;
+  width: 90%;
+  margin: 0 auto;
+}
+.moshavereh-right {
+  width: 140%;
+  height: 100%;
+}
+
+.moshavereh-left h1 {
+  font-weight: 800;
+  text-align: center;
+  padding: 15px;
+}
+
+.moshavereh-left p {
+  text-align: justify;
+  padding: 10px 15px;
+}
+
+.moshavereh-left button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-right: 120px;
+}
+
+.course-buy-box {
+  background-color: white;
+  border-radius: 20px;
+  padding: 1px 0;
+  margin-top: 60px;
+  padding-bottom: 50px;
+}
+
+.student-counts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 36px 0;
+}
+.student-count-right {
+  font-size: 20px;
+  text-align: center;
+  width: 50%;
+  border-left: 2px solid lightgray;
+}
+
+.student-count-left {
+  font-size: 20px;
+  text-align: center;
+  width: 50%;
+}
+
+.discount {
+  text-decoration: line-through;
+  font-size: 15px;
+  margin-bottom: -12px;
+  color: lightgray;
+}
+.course-money {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.discount-box {
+  width: 80%;
+  margin: 0 auto;
+  height: 170px;
+  background-color: #f2f6fc;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.course-details-right button {
+  width: 90%;
+  margin: 10px 22px;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  padding: 5px 10px;
+}
+
+.star {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.star button {
+  padding-left: 120px !important;
+}
+
+.love-icon {
+  background-color: #f2f6fc;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.keys-box {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.keys-icon {
+  background-color: #f2f6fc;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.course-detail-key {
+  background-color: white;
+  border-radius: 20px;
+  margin: 20px 0;
+}
+
+.course-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.course-pic img {
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+}
+.course-detail-key h1 {
+  font-weight: 800;
+  font-size: 16px;
+  padding: 20px 10px;
+}
+
+.keys div {
+  padding: 15px;
+}
+
+.short-link {
+  height: 120px;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  border-radius: 10px;
+  background: white;
+}
+
+.link-detail {
+  padding: 20px;
+  font-weight: 800;
+}
+
+.link-input input {
+  width: 375px;
+  height: 35px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+  border-color: lightgray;
+}
+.aboutTitle {
+  height: auto;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  font-weight: 800;
+  border-radius: 20px;
+  margin: 10px 0px;
+  padding: 20px 30px;
+  background-color: white;
+}
+
+.aboutTitle h1 {
+  /* font-size: 20px; */
+  padding-bottom: 10px;
+}
+.aboutTitle h3 {
+  color: lightslategrey;
+}
+
+.aboutCourse {
+  width: 100%;
+  height: auto;
+  font-weight: 800;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  border-radius: 20px;
+  padding: 20px 0px;
+  background-color: white;
+}
+
+.aboutCourse h1 {
+  /* font-size: 20px; */
+  padding: 10px 20px;
+}
+
+.aboutCourse img {
+  width: 120px;
+  height: 60px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.aboutCourse div {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-right: 20px;
+}
+.accardeon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+.right-accardeon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accardion-details-num {
+  border-radius: 50%;
+  border: 1px solid black;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}

@@ -1,0 +1,86 @@
+svg {
+  display: initial !important;
+}
+
+.body,
+html {
+  background-color: var(--gray-color);
+  font-size: 9.5px !important;
+}
+
+.swal-title {
+  font-size: 21px;
+}
+
+.swal-button {
+  padding: 7px 20px;
+  border-radius: 5px;
+  background-color: #7443ff;
+  color: white;
+  font-size: 12px;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}
+
+.swal-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.swal-button.swal-button--confirm:hover {
+  background-color: #8d65ff;
+}
+.swal-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg:hover {
+  color: #7642ff !important;
+}
+
+span.ps-menu-label.css-12w9als {
+  color: white;
+}
+span.ps-menu-label.css-12w9als:hover {
+  color: black;
+}
+span.ps-menu-icon.css-wx7wi4 svg path {
+  color: black;
+}
+span.ps-menu-label.ps-active.css-12w9als {
+  color: black;
+}
+span.ps-menu-icon.ps-active.css-wx7wi4 svg path {
+  color: black;
+}
+
+span.css-honxw6 {
+  color: white !important;
+}
+
+li.ps-menuitem-root.css-1tqrhto {
+  background-color: lightsteelblue;
+}
+
+.swiper.swiper-initialized.swiper-horizontal.swiper-rtl.mySwiper.container.flex.justify-center.swiper-backface-hidden {
+  background-color: #f5e7fe !important;
+  padding: 15px;
+}
+
+.score {
+  color: orange;
+}
+
+span.ps-menu-icon.css-wx7wi4 svg path {
+  color: white;
+}
+
+li.ml-5.p-2.flex.align-items-center.justify-content-center.bg-purple-600.rounded.text-white {
+  height: 40px !important;
+  width: 40px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

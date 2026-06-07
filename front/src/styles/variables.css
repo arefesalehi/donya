@@ -1,0 +1,18 @@
+:root {
+  --primary-font: vazir;
+  --primary-color: #7443ff;
+  --white-color: #ffffff;
+  --dark-color: #3b4359;
+  --gray-color: #f2f6fc;
+  --background-rgb: rgb(116, 67, 255);
+  --box-shadow: rgba(116, 67, 255, 0.25) 0px 54px 55px,
+    rgba(116, 67, 255, 0.12) 0px -12px 30px,
+    rgba(116, 67, 255, 0.12) 0px 4px 6px, rgba(116, 67, 255, 0.17) 0px 12px 13px,
+    rgba(116, 67, 255, 0.09) 0px -3px 5px;
+  --background-linear: linear-gradient(
+    255deg,
+    rgba(117, 68, 255, 1) 0%,
+    rgba(141, 101, 255, 1) 50%,
+    rgba(165, 134, 255, 1) 100%
+  );
+}
