@@ -1,0 +1,31 @@
+.heading-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 92%;
+  margin: 15px auto;
+}
+
+.heading-title-left button {
+  padding: 3px 10px;
+  color: var(--primary-color);
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  border: 2px solid var(--primary-color);
+}
+
+.heading-title-left button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.heading-title-right-text {
+  font-size: 20px;
+  font-weight: 800;
+  background-color: #f5e7fe;
+  padding: 3px 5px 3px 80px;
+  border-radius: 5px;
+}

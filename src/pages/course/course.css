@@ -1,0 +1,199 @@
+.course-titles{
+    width: 100%;
+    height: 850px;
+    /* background-color: aqua; */
+}
+
+.course-titles span{
+    font-size: 15px;
+    /* background: var(--primary-color); */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    margin-right: 20px;
+    /* color: white;
+} */
+}
+
+
+
+
+
+
+.course-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 90px;
+}
+.course-details-right{
+    width: 31%;
+    height: auto;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+.course-details-left{
+   width: 67%;
+   border-radius: 20px;
+   /* margin-top: -57px; */
+    height: 693px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+.course-info_video{
+    width: 100%;
+    height: 600px;
+    padding: 20px;
+
+ 
+}
+.socialmedia-icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+   
+}
+.student-count{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 40px  auto 20px auto;
+    margin-top: -36px;
+}
+.student-count-right{
+    font-size: 20px;
+    text-align: center;
+    width: 50%;
+    border-left: 2px solid lightgray;
+    
+}
+
+
+.student-count-left{
+    font-size: 20px;
+    text-align: center;
+    width: 50%;
+    
+}
+
+.discount{
+    text-decoration: line-through;
+    font-size: 15px;
+    margin-bottom: -12px;
+    color: lightgray;
+}
+
+.discount1{
+    font-size: 20px;
+    margin-bottom: -12px;
+    color: black;
+}
+.course-money{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.discount-box{
+    width: 90%;
+   
+
+    margin: 0 auto;
+    height: 150px;
+    background-color: #f2f6fc;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.discount-box-title{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.course-details-right button{
+    width: 90%;
+    margin: 10px 22px;
+}
+
+.modares-name{
+    width: 90%;
+    height: 70px;
+    margin: 10px auto;
+    background-color: #f2f6fc;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modares-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.modares-right img{
+    margin-left: 20px;
+    margin-right: 5px;
+}
+.modares-right p {
+    padding-left: 10px !important;
+    
+    border-left: 1px solid lightgray;
+}
+
+
+.course-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+
+}
+
+.course-detail div{
+  border-left: 2px solid lightgray;
+  text-align: center;
+  width: 30%;
+}
+.course-detail span {
+    text-align: center;
+}
+
+.course-menu{
+    width: 100%;
+    height: 70px;
+    margin-top: 30px;
+    background-color: white;
+}
+.course-menu ul {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-right: 14.5% !important;
+
+
+  
+}
+.course-menu li{
+    padding: 20px;
+   
+}
+
+/* button.text-white.bg-blue-700.hover\:bg-blue-800.focus\:ring-4.focus\:outline-none.focus\:ring-blue-300.font-medium.rounded-lg.text-xlg.px-5.py-2\.5.text-center.inline-flex.items-center.mr-2.dark\:bg-blue-600.dark\:hover\:bg-blue-700.dark\:focus\:ring-blue-800{
+    width: 85%;
+    height: 40px;
+    font-size: 14px;
+    
+} */

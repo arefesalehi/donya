@@ -1,0 +1,21 @@
+/* button.relative.align-middle.select-none.font-sans.font-medium.text-center.uppercase.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-10.max-w-\[40px\].h-10.max-h-\[40px\].rounded-lg.text-xs.bg-blue-500.text-white.shadow-md.shadow-blue-500\/20.hover\:shadow-lg.hover\:shadow-blue-500\/40.focus\:opacity-\[0\.85\].focus\:shadow-none.active\:opacity-\[0\.85\].active\:shadow-none {
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+}
+
+button.align-middle.select-none.font-sans.font-bold.text-center.uppercase.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.text-xs.py-3.px-6.rounded-lg.text-blue-gray-500.hover\:bg-blue-gray-500\/10.active\:bg-blue-gray-500\/30.flex.items-center.gap-2{
+    width: 70px;
+    height: 40px;
+    font-size: 16px;
+}
+
+button.align-middle.select-none.font-sans.font-bold.text-center.uppercase.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.text-xs.py-3.px-6.rounded-lg.text-blue-gray-500.hover\:bg-blue-gray-500\/10.active\:bg-blue-gray-500\/30.flex.items-center.gap-2{
+    width: 70px;
+    height: 40px;
+    font-size: 16px;
+ 
+}
+button.relative.align-middle.select-none.font-sans.font-medium.text-center.uppercase.transition-all.disabled\:opacity-50.disabled\:shadow-none.disabled\:pointer-events-none.w-10.max-w-\[40px\].h-10.max-h-\[40px\].rounded-lg.text-xs.text-blue-gray-500.hover\:bg-blue-gray-500\/10.active\:bg-blue-gray-500\/30{
+    font-size: 16px;
+} */
