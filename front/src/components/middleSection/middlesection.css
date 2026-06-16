@@ -1,0 +1,55 @@
+.middle-section {
+  width: 93%;
+  height: 350px;
+  background-color: rgba(141, 101, 255, 1);
+  margin: 100px auto;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.middle-section h1 {
+  font-size: 25px;
+  color: white;
+  margin: 30px 20px 20px 10px;
+}
+.input-search {
+  background-color: white;
+  width: 500px;
+  height: 45px;
+  border-radius: 10px;
+  margin-right: 20px;
+  overflow: hidden;
+}
+.input-search input {
+  width: 460px;
+  height: 45px;
+  border: none;
+}
+.input-icon {
+  background-color: var(--primary-color);
+  /* padding: 10px; */
+  color: white;
+  border-radius: 5px;
+  padding: -3px;
+  font-size: 29px;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+span.Typewriter__wrapper {
+  font-size: 25px;
+  color: white;
+  margin-right: 23px;
+}
+
+.Typewriter {
+  margin-bottom: 20px;
+}
+
+.inputss:focus {
+  outline: none !important;
+  border: none;
+}

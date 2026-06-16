@@ -1,0 +1,22 @@
+.ticketBox {
+  width: 150px;
+  height: 100px;
+  border: 2px solid var(--primary-color);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.allticketBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.ticketBox p {
+  margin: 11px 0;
+}
+.ticketBox svg {
+  margin: 7px 0;
+}

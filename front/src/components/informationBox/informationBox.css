@@ -1,0 +1,28 @@
+.information {
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  background-color: white;
+  margin: 40px 0px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+  box-shadow: rgba(116, 67, 255, 0.25) 0px 54px 55px,
+    rgba(116, 67, 255, 0.12) 0px -12px 30px,
+    rgba(116, 67, 255, 0.12) 0px 4px 6px, rgba(116, 67, 255, 0.17) 0px 12px 13px,
+    rgba(116, 67, 255, 0.09) 0px -3px 5px;
+}
+.information h1 {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 10px 0;
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+.desc {
+  margin: 20px;
+}
