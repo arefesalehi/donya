@@ -1,0 +1,9 @@
+.sidebar {
+  width: 29%;
+  height: auto;
+  padding: 20px 142px 20px 10px;
+}
+
+.sidebar ul li {
+  padding: 15px 0;
+}
