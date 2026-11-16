@@ -36,7 +36,8 @@ const Sessions = () => {
     }).then((data) => {
       if (data) {
         axios({
-          url: `http://localhost:4000/v1/courses/sessions/${sessionID}`,
+          url:
+            import.meta.env.VITE_API_URL + `/v1/courses/sessions/${sessionID}`,
           method: 'DELETE',
           headers: {
             Authorization: `Bearer ${
@@ -59,7 +60,7 @@ const Sessions = () => {
   const addNewSession = (e) => {
     e.preventDefault()
     axios({
-      url: `http://localhost:4000/v1/courses/${category}/sessions`,
+      url: import.meta.env.VITE_API_URL + `/v1/courses/${category}/sessions`,
       method: 'POST',
       headers: {
         Authorization: `Bearer ${
@@ -157,7 +158,7 @@ const Sessions = () => {
               value={form.values.title}
               type="text"
               id="first_name"
-              className="block border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-2.5 border focus:border-blue-500 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:placeholder-gray-400 dark:text-white"
+              className="block bg-gray-50 dark:bg-gray-700 p-2.5 border border-gray-300 focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:text-white dark:placeholder-gray-400"
               placeholder="نام دوره را وارد نمایید..."
               required
               style={{ height: '35px', fontSize: '12px' }}
@@ -179,7 +180,7 @@ const Sessions = () => {
               onBlur={form.handleBlur}
               value={form.values.time}
               id="last_name"
-              className="block border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-2.5 border focus:border-blue-500 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:placeholder-gray-400 dark:text-white"
+              className="block bg-gray-50 dark:bg-gray-700 p-2.5 border border-gray-300 focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:text-white dark:placeholder-gray-400"
               placeholder=" مدت زمان جلسه را وارد نمایید..."
               required
               style={{ height: '35px', fontSize: '12px' }}
@@ -203,7 +204,7 @@ const Sessions = () => {
                 defaultValue="-1"
                 style={{ height: '35px', fontSize: '12px' }}
                 id="countries"
-                className="block border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-2.5 border focus:border-blue-500 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:placeholder-gray-400 dark:text-white"
+                className="block bg-gray-50 dark:bg-gray-700 p-2.5 border border-gray-300 focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:text-white dark:placeholder-gray-400"
               >
                 <option selected value="-1">
                   منوی اصلی را انتخاب نمایید
@@ -240,7 +241,7 @@ const Sessions = () => {
                 value="1"
                 checked={form.values.radio === '1 '}
                 type="radio"
-                className="border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 focus:ring-blue-500 dark:focus:ring-blue-600 focus:ring-2 dark:ring-offset-gray-800 w-4 h-4 text-blue-600"
+                className="bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 w-4 h-4 text-blue-600"
               />
               {/* {form.errors.radio && form.touched.radio && (
               <p style={{ color: 'red' ,fontSize:'14px'}}>
@@ -260,7 +261,7 @@ const Sessions = () => {
                 onBlur={form.handleBlur}
                 value="0"
                 name="radio"
-                className="border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 focus:ring-blue-500 dark:focus:ring-blue-600 focus:ring-2 dark:ring-offset-gray-800 w-4 h-4 text-blue-600"
+                className="bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 w-4 h-4 text-blue-600"
               />
               <label className="ml-2 pr-4 font-medium text-gray-900 text-xlg dark:text-gray-300">
                 {' '}
@@ -274,7 +275,7 @@ const Sessions = () => {
               عکس دوره
             </label>
             <div className="flex justify-center items-center w-full">
-              <label className="flex flex-col justify-center items-center border-2 border-gray-300 dark:hover:border-gray-500 dark:border-gray-600 bg-gray-50 dark:hover:bg-bray-800 hover:bg-gray-100 dark:hover:bg-gray-600 dark:bg-gray-700 border-dashed rounded-lg w-full h-40 cursor-pointer">
+              <label className="flex flex-col justify-center items-center bg-gray-50 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-bray-800 dark:hover:bg-gray-600 border-2 border-gray-300 dark:border-gray-600 dark:hover:border-gray-500 border-dashed rounded-lg w-full h-40 cursor-pointer">
                 <div className="flex flex-col justify-center items-center pt-5 pb-6">
                   <svg
                     className="mb-4 w-8 h-8 text-gray-500 dark:text-gray-400"
@@ -295,7 +296,7 @@ const Sessions = () => {
                     <span className="font-semibold">Click to upload</span> or
                     drag and drop
                   </p>
-                  <p className="text-gray-500 text-xs dark:text-gray-400">
+                  <p className="text-gray-500 dark:text-gray-400 text-xs">
                     SVG, PNG, JPG or GIF (MAX. 800x400px)
                   </p>
                 </div>
@@ -343,8 +344,8 @@ const Sessions = () => {
         className="relative shadow-md mt-10 mr-20 sm:rounded-lg overflow-x-auto"
         style={{ width: '90%', borderRadius: '20px' }}
       >
-        <table className="w-full text-gray-500 text-left text-xlg dark:text-gray-400">
-          <thead className="text-right bg-gray-50 dark:bg-gray-700 text-gray-700 text-xlg dark:text-gray-400 uppercase">
+        <table className="w-full text-gray-500 text-xlg dark:text-gray-400 text-left">
+          <thead className="bg-gray-50 dark:bg-gray-700 text-gray-700 text-xlg dark:text-gray-400 text-right uppercase">
             <tr>
               <th scope="col" className="px-6 py-3">
                 شناسه
@@ -372,7 +373,7 @@ const Sessions = () => {
               return (
                 <tr
                   key={session._id}
-                  className="dark:border-gray-700 bg-white dark:bg-gray-800 border-b"
+                  className="bg-white dark:bg-gray-800 dark:border-gray-700 border-b"
                 >
                   <th
                     scope="row"

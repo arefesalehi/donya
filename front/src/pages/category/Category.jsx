@@ -25,7 +25,8 @@ const Category = () => {
 
   useEffect(() => {
     axios({
-      url: `http://localhost:4000/v1/courses/category/${categoryName}`,
+      url:
+        import.meta.env.VITE_API_URL + `/v1/courses/category/${categoryName}`,
     }).then((data) => {
       console.log('category course:', data.data)
       console.log('all course:', data.data)
@@ -195,15 +196,15 @@ const Category = () => {
               <>
                 <a
                   href="#"
-                  className="flex md:flex-row flex-col items-center border-gray-200 dark:border-gray-700 bg-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:bg-gray-800 shadow border rounded-lg md:max-w-xl"
+                  className="flex md:flex-row flex-col items-center bg-white hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 shadow border border-gray-200 dark:border-gray-700 rounded-lg md:max-w-xl"
                 >
                   <img
-                    className="rounded-t-lg md:rounded-none md:rounded-l-lg w-full md:w-48 h-96 md:h-auto object-cover"
+                    className="md:rounded-none rounded-t-lg md:rounded-l-lg w-full md:w-48 h-96 md:h-auto object-cover"
                     src="/images/advance6.png"
                     alt=""
                   />
                   <div className="flex flex-col justify-between p-4 leading-normal">
-                    <h5 className="mb-2 font-bold text-2xl text-gray-900 dark:text-white tracking-tight">
+                    <h5 className="mb-2 font-bold text-gray-900 dark:text-white text-2xl tracking-tight">
                       Noteworthy technology acquisitions 2021
                     </h5>
                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
@@ -233,11 +234,14 @@ const Category = () => {
                 key={category._id}
                 to={`/course-info/${category.shortName}`}
                 style={{ width: '90%', margin: '0 auto 10px auto' }}
-                className="flex md:flex-row flex-col items-center border-gray-200 dark:border-gray-700 bg-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:bg-gray-800 shadow border rounded-lg"
+                className="flex md:flex-row flex-col items-center bg-white hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 shadow border border-gray-200 dark:border-gray-700 rounded-lg"
               >
                 <img
-                  className="pt-2 pb-2 rounded-t-lg md:rounded-none md:rounded-l-lg md:w-48 h-96 md:h-auto object-cover"
-                  src={`http://localhost:4000/courses/covers/${category.cover}`}
+                  className="pt-2 pb-2 md:rounded-none rounded-t-lg md:rounded-l-lg md:w-48 h-96 md:h-auto object-cover"
+                  src={
+                    import.meta.env.VITE_API_URL +
+                    `/courses/covers/${category.cover}`
+                  }
                   alt=""
                   style={{ width: '30%', height: '90%' }}
                 />
@@ -245,8 +249,8 @@ const Category = () => {
                   style={{ width: '71%' }}
                   className="flex flex-col justify-between align-items-center p-4 leading-normal"
                 >
-                  <h5 className="mb-2 font-bold text-2xl text-gray-900 dark:text-white tracking-tight">
-                    <p className="mt-5 font-bold text-3xl text-purple-800">
+                  <h5 className="mb-2 font-bold text-gray-900 dark:text-white text-2xl tracking-tight">
+                    <p className="mt-5 font-bold text-purple-800 text-3xl">
                       {' '}
                       {category.name}
                     </p>

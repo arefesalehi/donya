@@ -111,7 +111,10 @@ const UserCourse = () => {
                 <div className="coursebox">
                   <div className="course-box-right">
                     <img
-                      src={`http://localhost:4000/courses/covers/${allcourse?.course?.cover}`}
+                      src={
+                        import.meta.env.VITE_API_URL +
+                        `/courses/covers/${allcourse?.course?.cover}`
+                      }
                       alt=""
                     />
                   </div>

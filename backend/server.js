@@ -18,9 +18,13 @@ dotenv.config();
 })();
 
 
-const port = +process.env.PORT || 3000;
+const port = +process.env.PORT || 4000;
 
 const productionMode = process.env.NODE_ENV === 'production'
 app.listen(port, () => {
   console.log(`Server running in ${productionMode?"production":"development"} mode on port ${port}`);
 });
+
+
+const cors = require("cors");
+app.use(cors({ origin: process.env.CLIENT_URL }));

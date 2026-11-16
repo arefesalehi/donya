@@ -27,7 +27,7 @@ const Article = () => {
 
   useEffect(() => {
     axios({
-      url: `http://localhost:4000/v1/articles/${articleName}`,
+      url: import.meta.env.VITE_API_URL + `/v1/articles/${articleName}`,
     }).then((data) => {
       console.log('getSingleArticle:', data.data)
       setGetSingleArticle(data.data)
@@ -84,7 +84,10 @@ const Article = () => {
               </div>
 
               <img
-                src={`http://localhost:4000/courses/covers/${getSingleArticle.cover}`}
+                src={
+                  import.meta.env.VITE_API_URL +
+                  `/courses/covers/${getSingleArticle.cover}`
+                }
                 alt=""
                 className="blog-img"
               />
@@ -176,7 +179,10 @@ const Article = () => {
                   allcourse.courseAverageScore === 5 && (
                     <div key={allcourse._id}>
                       <img
-                        src={`http://localhost:4000/courses/covers/${allcourse.cover}`}
+                        src={
+                          import.meta.env.VITE_API_URL +
+                          `/courses/covers/${allcourse.cover}`
+                        }
                         alt="pic"
                       />
                       <h3>{allcourse.name}</h3>

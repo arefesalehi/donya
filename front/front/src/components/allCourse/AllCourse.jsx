@@ -13,7 +13,7 @@ const AllCourse = () => {
 
   useEffect(() => {
     axios({
-      url: 'http://localhost:4000/v1/courses',
+      url: import.meta.env.VITE_API_URL +'/v1/courses',
     }).then((data) => {
       console.log('all Course:', data.data)
       setAllCourses(data.data)
@@ -32,15 +32,15 @@ const AllCourse = () => {
         ]}
       />
 
-      <div className="container flex justify-center mt-16 ">
-        <div className="grid grid-cols-3 gap-8 " style={{ width: '90%' }}>
+      <div className="flex justify-center mt-16 container">
+        <div className="gap-8 grid grid-cols-3" style={{ width: '90%' }}>
           {shownCourse.map((allCourse) => {
             return <CourseBox key={allCourse._id} {...allCourse} />
           })}
         </div>
       </div>
 
-      <div className="pagination ">
+      <div className="pagination">
         <Pagination
           items={allCourses}
           itemsCount={3}

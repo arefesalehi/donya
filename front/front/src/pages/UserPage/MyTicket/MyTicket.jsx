@@ -18,7 +18,7 @@ const MyTicket = () => {
 
   useEffect(() => {
     axios({
-      url: `http://localhost:4000/v1/tickets/answer/${id}`,
+      url: import.meta.env.VITE_API_URL + `/v1/tickets/answer/${id}`,
       headers: {
         Authorization: `Bearer ${
           JSON.parse(localStorage.getItem('user')).token
@@ -32,7 +32,7 @@ const MyTicket = () => {
 
   useEffect(() => {
     axios({
-      url: `http://localhost:4000/v1/infos/p-admin`,
+      url: import.meta.env.VITE_API_URL + `/v1/infos/p-admin`,
       headers: {
         Authorization: `Bearer ${
           JSON.parse(localStorage.getItem('user')).token
