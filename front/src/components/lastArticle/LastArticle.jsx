@@ -7,7 +7,7 @@ const LastArticle = () => {
   const [lastArticle, setLastArticle] = useState([])
   useEffect(() => {
     axios({
-      url: 'http://localhost:4000/v1/articles',
+      url: import.meta.env.VITE_API_URL +'/v1/articles',
     }).then((data) => {
       console.log('lastArticle:', data.data)
       setLastArticle(data.data)

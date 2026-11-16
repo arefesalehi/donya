@@ -14,7 +14,7 @@ const Comments = () => {
 
   const getAllComment = () => {
     axios({
-      url: 'http://localhost:4000/v1/comments',
+      url: import.meta.env.VITE_API_URL +'/v1/comments',
     }).then((data) => {
       console.log('allcomments:', data.data)
       setAllComments(data.data)

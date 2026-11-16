@@ -12,7 +12,7 @@ const AllArticle = () => {
   const [shownCourse, setShownCourse] = useState([])
   useEffect(() => {
     axios({
-      url: 'http://localhost:4000/v1/articles',
+      url: import.meta.env.VITE_API_URL +'/v1/articles',
     }).then((data) => {
       console.log('all Course:', data.data)
       setAllArticles(data.data)
@@ -30,8 +30,8 @@ const AllArticle = () => {
         ]}
       />
 
-      <div className="container flex justify-center mt-16 ">
-        <div className="grid grid-cols-3 gap-8 ">
+      <div className="flex justify-center mt-16 container">
+        <div className="gap-8 grid grid-cols-3">
           {shownCourse.map((allArticle) => {
             return <ArticleBox key={allArticle._id} {...allArticle} />
           })}

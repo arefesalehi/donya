@@ -18,7 +18,7 @@ const Articles = () => {
   useEffect(() => {
     getAllArticle()
     axios({
-      url: 'http://localhost:4000/v1/category',
+      url: import.meta.env.VITE_API_URL +'/v1/category',
     }).then((data) => {
       console.log('category:', data.data)
       setCategorys(data.data)
@@ -27,7 +27,7 @@ const Articles = () => {
 
   const getAllArticle = () => {
     axios({
-      url: 'http://localhost:4000/v1/articles',
+      url: import.meta.env.VITE_API_URL +'/v1/articles',
     }).then((data) => {
       console.log('allarticle:', data.data)
       setArticles(data.data)
@@ -134,7 +134,7 @@ const Articles = () => {
 
     console.log('newarticle=>', newArticle)
 
-    fetch('http://localhost:4000/v1/articles', {
+    fetch(import.meta.env.VITE_API_URL +'/v1/articles', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
