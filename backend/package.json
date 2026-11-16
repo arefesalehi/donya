@@ -12,12 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
-<<<<<<< HEAD
     "cors": "^2.8.6",
-    "dotenv": "^16.0.3",
-=======
     "dotenv": "^16.6.1",
->>>>>>> 4ae8772989cbe4fae749cf4792d421b933028fcb
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^6.6.5",
