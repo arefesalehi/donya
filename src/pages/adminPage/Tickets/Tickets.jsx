@@ -39,7 +39,7 @@ const Tickets = () => {
       if (data.length) {
         const localStorageData = JSON.parse(localStorage.getItem('user'))
         axios({
-          url: `http://localhost:4000/v1/tickets/answer`,
+          url: import.meta.env.VITE_API_URL + `/v1/tickets/answer`,
           method: 'POST',
           headers: {
             Authorization: `Bearer ${localStorageData.token}`,
@@ -72,8 +72,8 @@ const Tickets = () => {
         className="relative shadow-md mt-10 mr-20 sm:rounded-lg overflow-x-auto"
         style={{ width: '90%', borderRadius: '20px' }}
       >
-        <table className="w-full text-gray-500 text-left text-xlg dark:text-gray-400">
-          <thead className="text-right bg-purple-100 dark:bg-gray-700 text-gray-700 text-xlg dark:text-gray-400 uppercase">
+        <table className="w-full text-gray-500 text-xlg dark:text-gray-400 text-left">
+          <thead className="bg-purple-100 dark:bg-gray-700 text-gray-700 text-xlg dark:text-gray-400 text-right uppercase">
             <tr>
               <th scope="col" className="px-6 py-3">
                 شناسه
@@ -104,7 +104,7 @@ const Tickets = () => {
               return (
                 <tr
                   key={ticket._id}
-                  className="dark:border-gray-700 bg-white dark:bg-gray-800 border-b"
+                  className="bg-white dark:bg-gray-800 dark:border-gray-700 border-b"
                 >
                   <th
                     scope="row"

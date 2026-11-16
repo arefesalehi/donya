@@ -14,7 +14,7 @@ const Comments = () => {
 
   const getAllComment = () => {
     axios({
-      url: 'http://localhost:4000/v1/comments',
+      url: import.meta.env.VITE_API_URL +'/v1/comments',
     }).then((data) => {
       console.log('allcomments:', data.data)
       setAllComments(data.data)
@@ -31,7 +31,7 @@ const Comments = () => {
         const localStorageData = JSON.parse(localStorage.getItem('user'))
 
         axios({
-          url: `http://localhost:4000/v1/comments/${commentID}`,
+          url: import.meta.env.VITE_API_URL +`/v1/comments/${commentID}`,
           method: 'DELETE',
           headers: {
             Authorization: `Bearer ${localStorageData.token}`,
@@ -60,7 +60,7 @@ const Comments = () => {
         const localStorageData = JSON.parse(localStorage.getItem('user'))
 
         axios({
-          url: `http://localhost:4000/v1/users/ban/${banID}`,
+          url: import.meta.env.VITE_API_URL +`/v1/users/ban/${banID}`,
           method: 'PUT',
           headers: {
             Authorization: `Bearer ${localStorageData.token}`,
@@ -89,7 +89,7 @@ const Comments = () => {
     }).then((data) => {
       if (data.length) {
         axios({
-          url: `http://localhost:4000/v1/comments/answer/${answerID}`,
+          url: import.meta.env.VITE_API_URL +`/v1/comments/answer/${answerID}`,
           method: 'POST',
           headers: {
             Authorization: `Bearer ${localStorageData.token}`,
@@ -128,7 +128,7 @@ const Comments = () => {
         const localStorageData = JSON.parse(localStorage.getItem('user'))
 
         axios({
-          url: `http://localhost:4000/v1/comments/accept/${acceptID}`,
+          url: import.meta.env.VITE_API_URL +`/v1/comments/accept/${acceptID}`,
           method: 'PUT',
           headers: {
             Authorization: `Bearer ${localStorageData.token}`,
@@ -158,7 +158,7 @@ const Comments = () => {
         const localStorageData = JSON.parse(localStorage.getItem('user'))
 
         axios({
-          url: `http://localhost:4000/v1/comments/reject/${rejectID}`,
+          url: import.meta.env.VITE_API_URL +`/v1/comments/reject/${rejectID}`,
           method: 'PUT',
           headers: {
             Authorization: `Bearer ${localStorageData.token}`,
@@ -187,8 +187,8 @@ const Comments = () => {
         className="relative shadow-md mt-10 mr-20 sm:rounded-lg overflow-x-auto"
         style={{ width: '90%', borderRadius: '20px' }}
       >
-        <table className="w-full text-gray-500 text-left text-xlg dark:text-gray-400">
-          <thead className="text-right bg-purple-100 dark:bg-gray-700 text-gray-700 text-xlg dark:text-gray-400 uppercase">
+        <table className="w-full text-gray-500 text-xlg dark:text-gray-400 text-left">
+          <thead className="bg-purple-100 dark:bg-gray-700 text-gray-700 text-xlg dark:text-gray-400 text-right uppercase">
             <tr>
               <th scope="col" className="px-6 py-3">
                 شناسه
@@ -228,7 +228,7 @@ const Comments = () => {
               return (
                 <tr
                   key={allcomment._id}
-                  className="dark:border-gray-700 bg-white dark:bg-gray-800 border-b"
+                  className="bg-white dark:bg-gray-800 dark:border-gray-700 border-b"
                 >
                   <th
                     scope="row"

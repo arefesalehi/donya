@@ -25,7 +25,7 @@ const CourseBox = (props) => {
         console.log(data)
         if (data) {
           axios({
-            url: `http://localhost:4000/v1/courses/${course._id}/register`,
+            url: import.meta.env.VITE_API_URL +`/v1/courses/${course._id}/register`,
             method: 'POST',
             headers: {
               Authorization: `Bearer ${
@@ -55,12 +55,12 @@ const CourseBox = (props) => {
     <div className="h-[100%] course">
       <div
         style={{ height: '100%' }}
-        className="border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow border rounded-lg w-400"
+        className="bg-white dark:bg-gray-800 shadow border border-gray-200 dark:border-gray-700 rounded-lg w-400"
       >
         <Link to={`/course-info/${props.shortName}`} className="h-[300px]">
           <img
             className="p-8 rounded-t-lg"
-            src={`http://localhost:4000/courses/covers/${props.cover}`}
+            src={import.meta.env.VITE_API_URL +`/courses/covers/${props.cover}`}
             alt="product image"
             style={{ width: '-webkit-fill-available', borderRadius: '30px' }}
             onLoad={setLoaded}
@@ -124,7 +124,7 @@ const CourseBox = (props) => {
               >
                 {props.price === 0 ? 'رایگان' : props.price.toLocaleString()}
               </span>
-              <span className="font-bold text-2xl text-gray-900 dark:text-white">
+              <span className="font-bold text-gray-900 dark:text-white text-2xl">
                 {props.price !== 0 && props.discount !== 0
                   ? props.price * (props.discount / 100).toLocaleString()
                   : ''}
@@ -137,7 +137,7 @@ const CourseBox = (props) => {
               href="javascript.void(0)"
               to={`/course-info/${props.shortName}`}
               style={{ background: '#7443ff' }}
-              className="hover:bg-blue-800 dark:hover:bg-blue-700 dark:bg-blue-600 px-5 py-2.5 rounded-lg focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-center text-white text-xl focus:outline-none"
+              className="hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 px-5 py-2.5 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-white text-xl text-center"
             >
               اطلاعات بیشتر
             </Link>
@@ -145,7 +145,7 @@ const CourseBox = (props) => {
               onClick={()=>registerinCourse(props._id)}
               to="#"
               style={{ background: '#7443ff' }}
-              className="hover:bg-indigo-800 dark:hover:bg-blue-700 dark:bg-[#8d66ff] px-5 py-2.5 rounded-lg focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-center text-white text-xl focus:outline-none"
+              className="hover:bg-indigo-800 dark:bg-[#8d66ff] dark:hover:bg-blue-700 px-5 py-2.5 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-white text-xl text-center"
             >
               ثبت نام
             </Link>

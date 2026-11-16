@@ -20,7 +20,7 @@ const LeftSide = () => {
 
   useEffect(() => {
     axios({
-      url: `http://localhost:4000/v1/courses/${courseName}`,
+      url: import.meta.env.VITE_API_URL +`/v1/courses/${courseName}`,
     }).then((data) => {
       console.log('getSingleCourseleftside:', data.data)
       setGetSingleCourse(data.data)
@@ -30,7 +30,7 @@ const LeftSide = () => {
 
   useEffect(() => {
     axios({
-      url: `http://localhost:4000/v1/courses/related/${courseName}`,
+      url: import.meta.env.VITE_API_URL +`/v1/courses/related/${courseName}`,
     }).then((data) => {
       console.log('relatedCourse:', data.data)
       console.log('courseDetail:', data.data)
@@ -48,7 +48,7 @@ const LeftSide = () => {
         console.log(data)
         if (data) {
           axios({
-            url: `http://localhost:4000/v1/courses/${getSingleCourse._id}/register`,
+            url: import.meta.env.VITE_API_URL +`/v1/courses/${getSingleCourse._id}/register`,
             method: 'POST',
             headers: {
               Authorization: `Bearer ${
@@ -193,7 +193,7 @@ const LeftSide = () => {
                   paddingLeft: 0,
                 }}
                 type="button"
-                className="inline-flex items-center bg-[#a385ff] hover:bg-[#9272f3] dark:hover:bg-blue-700 dark:bg-blue-600 rounded-lg focus:ring-4 font-medium text-white focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 text-lg"
+                className="inline-flex items-center bg-[#a385ff] hover:bg-[#9272f3] dark:bg-blue-600 dark:hover:bg-blue-700 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-white text-lg"
               >
                 <FaUserGraduate className="mr-10" />
                 <p className="mr-3">شما دانشجوی دوره هستید </p>
@@ -209,7 +209,7 @@ const LeftSide = () => {
                   color: 'white',
                   padding: '12px 11px',
                 }}
-                className="inline-flex items-center bg-blue-700 hover:bg-blue-800 dark:hover:bg-blue-700 dark:bg-blue-600 mr-2 px-5 py-2.5 rounded-lg focus:ring-4 font-medium text-white focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 text-center text-xlg"
+                className="inline-flex items-center bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 mr-2 px-5 py-2.5 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-white text-xlg text-center"
               >
                 <svg
                   className="mr-2 w-3.5 h-3.5"
@@ -328,7 +328,7 @@ const LeftSide = () => {
           return (
             <div key={related._id}>
               <img
-                src={`http://localhost:4000/courses/covers/${related.cover}`}
+                src={import.meta.env.VITE_API_URL +`/courses/covers/${related.cover}`}
                 alt=""
               />
               <h3> {related.name}</h3>

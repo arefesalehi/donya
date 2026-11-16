@@ -19,7 +19,7 @@ const Ticket = () => {
 
   const getSubDep = (dep) => {
     axios({
-      url: `http://localhost:4000/v1/tickets/departments-subs/${dep}`,
+      url: import.meta.env.VITE_API_URL + `/v1/tickets/departments-subs/${dep}`,
     }).then((data) => {
       console.log('subdepartment:', data.data)
       setSubDepartment(data.data)

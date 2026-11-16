@@ -31,7 +31,7 @@ const AdminTopbar = () => {
 
   const seeNotification = useCallback((notifID) => {
     axios({
-      url: `http://localhost:4000/v1/notifications/see/${notifID}`,
+      url: import.meta.env.VITE_API_URL +`/v1/notifications/see/${notifID}`,
       method: 'PUT',
       headers: {
         Authorization: `Bearer ${

@@ -23,7 +23,7 @@ const UserOrders = () => {
 
   const singleOrder = (orderID) => {
     axios({
-      url: `http://localhost:4000/v1/orders/${orderID}`,
+      url: import.meta.env.VITE_API_URL + `/v1/orders/${orderID}`,
       headers: {
         Authorization: `Bearer ${
           JSON.parse(localStorage.getItem('user')).token
@@ -48,10 +48,10 @@ const UserOrders = () => {
         }}
       >
         <table
-          className="text-gray-500 text-left text-xlg dark:text-gray-400 table"
+          className="table text-gray-500 text-xlg dark:text-gray-400 text-left"
           style={{ width: '82%' }}
         >
-          <thead className="text-right bg-gray-50 dark:bg-gray-700 text-gray-700 text-xlg dark:text-gray-400 uppercase">
+          <thead className="bg-gray-50 dark:bg-gray-700 text-gray-700 text-xlg dark:text-gray-400 text-right uppercase">
             <tr>
               <th>شناسه</th>
               <th>تاریخ</th>
@@ -97,7 +97,7 @@ const UserOrders = () => {
         </table>
 
         <div>
-          <button className="bttn table-btn">بعدی</button>
+          <button className="table-btn bttn">بعدی</button>
         </div>
       </div>
     </>

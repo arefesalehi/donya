@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const dotenv = require('dotenv');
 const { default: mongoose } = require('mongoose');
 const app = require('./app');

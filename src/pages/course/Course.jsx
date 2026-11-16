@@ -36,7 +36,7 @@ const Course = () => {
   const navigate= useNavigate()
   useEffect(() => {
     axios({
-      url: `http://localhost:4000/v1/courses/${courseName}`,
+      url: import.meta.env.VITE_API_URL +`/v1/courses/${courseName}`,
     }).then((data) => {
       console.log('getSingleCourse:', data.data)
       setGetSingleCourseData(data.data)
@@ -56,7 +56,7 @@ const Course = () => {
         console.log(data)
         if (data) {
           axios({
-            url: `http://localhost:4000/v1/courses/${course._id}/register`,
+            url: import.meta.env.VITE_API_URL +`/v1/courses/${course._id}/register`,
             method: 'POST',
             headers: {
               Authorization: `Bearer ${
@@ -208,7 +208,7 @@ const Course = () => {
                         padding: '12px 11px',
                         fontSize: '16px',
                       }}
-                      className="inline-flex justify-center items-center hover:bg-blue-800 dark:hover:bg-blue-700 dark:bg-blue-600 rounded-lg focus:ring-4 font-medium text-white focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 text-center text-lg"
+                      className="inline-flex justify-center items-center hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-white text-lg text-center"
                     >
                       <FaUserGraduate />
                       {'    '}شما دانشجوی دوره هستید
@@ -220,7 +220,7 @@ const Course = () => {
                       onClick={() => registerInCourse(courseDetail)}
                       type="button"
                       style={{ background: '#8d65ffcc', width: '85%' }}
-                      className="inline-flex justify-center items-center hover:bg-blue-800 dark:hover:bg-blue-700 dark:bg-blue-600 mr-2 px-5 py-2.5 rounded-lg focus:ring-4 font-medium text-white focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 text-center text-xlg"
+                      className="inline-flex justify-center items-center hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 mr-2 px-5 py-2.5 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-white text-xlg text-center"
                     >
                       <svg
                         className="mr-2 w-3.5 h-3.5"
@@ -247,7 +247,7 @@ const Course = () => {
                         color: '#f68636',
                         padding: '12px 11px',
                       }}
-                      className="inline-flex justify-center items-center bg-blue-700 hover:bg-blue-800 dark:hover:bg-blue-700 dark:bg-blue-600 mr-2 px-5 py-2.5 rounded-lg focus:ring-4 text-white focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-center text-xlg"
+                      className="inline-flex justify-center items-center bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 mr-2 px-5 py-2.5 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-white text-xlg text-center"
                     >
                       <AiOutlineDownload
                         style={{

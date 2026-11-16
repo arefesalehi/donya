@@ -17,7 +17,7 @@ const Search = () => {
 
   useEffect(() => {
     axios({
-      url: `http://localhost:4000/v1/search/${value}`,
+      url: import.meta.env.VITE_API_URL + `/v1/search/${value}`,
     }).then((data) => {
       console.log(data.data)
       setAllResultArticle(data.data.allResultArticles)

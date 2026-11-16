@@ -100,7 +100,7 @@ const Articles = () => {
     }).then((data) => {
       if (data) {
         axios({
-          url: `http://localhost:4000/v1/articles/${articleID}`,
+          url: import.meta.env.VITE_API_URL +`/v1/articles/${articleID}`,
           method: 'DELETE',
           headers: {
             Authorization: `Bearer ${
@@ -183,7 +183,7 @@ const Articles = () => {
               value={form.values.title}
               type="text"
               id="first_name"
-              className="block border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-2.5 border focus:border-blue-500 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:placeholder-gray-400 dark:text-white"
+              className="block bg-gray-50 dark:bg-gray-700 p-2.5 border border-gray-300 focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:text-white dark:placeholder-gray-400"
               placeholder="نام دوره را وارد نمایید..."
               required
               style={{ height: '35px', fontSize: '12px' }}
@@ -206,7 +206,7 @@ const Articles = () => {
               onBlur={form.handleBlur}
               value={form.values.shortName}
               id="last_name"
-              className="block border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-2.5 border focus:border-blue-500 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:placeholder-gray-400 dark:text-white"
+              className="block bg-gray-50 dark:bg-gray-700 p-2.5 border border-gray-300 focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:text-white dark:placeholder-gray-400"
               placeholder=" لینک را وارد نمایید..."
               required
               style={{ height: '35px', fontSize: '12px' }}
@@ -230,7 +230,7 @@ const Articles = () => {
             value={form.values.body}
             id="message"
             rows="4"
-            className="block border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 mb-4 p-2.5 border focus:border-blue-500 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full h-96 text-gray-900 text-xlg dark:placeholder-gray-400 dark:text-white"
+            className="block bg-gray-50 dark:bg-gray-700 mb-4 p-2.5 border border-gray-300 focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full h-96 text-gray-900 text-xlg dark:text-white dark:placeholder-gray-400"
             placeholder="متن خود را وارد نمایید..."
           ></textarea>
           {form.errors.body && form.touched.body && (
@@ -261,7 +261,7 @@ const Articles = () => {
               عکس دوره
             </label>
             <div className="flex justify-center items-center w-full">
-              <label className="flex flex-col justify-center items-center border-2 border-gray-300 dark:hover:border-gray-500 dark:border-gray-600 bg-gray-50 dark:hover:bg-bray-800 hover:bg-gray-100 dark:hover:bg-gray-600 dark:bg-gray-700 border-dashed rounded-lg w-full h-40 cursor-pointer">
+              <label className="flex flex-col justify-center items-center bg-gray-50 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-bray-800 dark:hover:bg-gray-600 border-2 border-gray-300 dark:border-gray-600 dark:hover:border-gray-500 border-dashed rounded-lg w-full h-40 cursor-pointer">
                 <div className="flex flex-col justify-center items-center pt-5 pb-6">
                   <svg
                     className="mb-4 w-8 h-8 text-gray-500 dark:text-gray-400"
@@ -282,7 +282,7 @@ const Articles = () => {
                     <span className="font-semibold">Click to upload</span> or
                     drag and drop
                   </p>
-                  <p className="text-gray-500 text-xs dark:text-gray-400">
+                  <p className="text-gray-500 dark:text-gray-400 text-xs">
                     SVG, PNG, JPG or GIF (MAX. 800x400px)
                   </p>
                 </div>
@@ -321,7 +321,7 @@ const Articles = () => {
                 value={form.values.categoryID}
                 style={{ height: '35px', fontSize: '12px' }}
                 id="countries"
-                className="block border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-2.5 border focus:border-blue-500 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:placeholder-gray-400 dark:text-white"
+                className="block bg-gray-50 dark:bg-gray-700 p-2.5 border border-gray-300 focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:text-white dark:placeholder-gray-400"
               >
                 <option defaultValue="-1">
                   لطفا دسته بندی مورد نظر را انتخاب نمایید
@@ -368,8 +368,8 @@ const Articles = () => {
         className="relative shadow-md mt-10 mr-20 sm:rounded-lg overflow-x-auto"
         style={{ width: '90%', borderRadius: '20px' }}
       >
-        <table className="w-full text-gray-500 text-left text-xlg dark:text-gray-400">
-          <thead className="text-right bg-gray-50 dark:bg-gray-700 text-gray-700 text-xlg dark:text-gray-400 uppercase">
+        <table className="w-full text-gray-500 text-xlg dark:text-gray-400 text-left">
+          <thead className="bg-gray-50 dark:bg-gray-700 text-gray-700 text-xlg dark:text-gray-400 text-right uppercase">
             <tr>
               <th scope="col" className="px-6 py-3">
                 شناسه
@@ -403,7 +403,7 @@ const Articles = () => {
               return (
                 <tr
                   key={article._id}
-                  className="dark:border-gray-700 bg-white dark:bg-gray-800 border-b"
+                  className="bg-white dark:bg-gray-800 dark:border-gray-700 border-b"
                 >
                   <th
                     scope="row"

@@ -77,7 +77,7 @@ const Courses = () => {
 
   const getAllCategory = () => {
     axios({
-      url: 'http://localhost:4000/v1/category',
+      url: import.meta.env.VITE_API_URL +'/v1/category',
     }).then((data) => {
       console.log('allcategory:', data.data)
       setCategories(data.data)
@@ -86,7 +86,7 @@ const Courses = () => {
 
   const getAllCourse = () => {
     axios({
-      url: 'http://localhost:4000/v1/courses',
+      url: import.meta.env.VITE_API_URL +'/v1/courses',
     }).then((data) => {
       console.log('allcourse:', data.data)
       setAllCourse(data.data)
@@ -102,7 +102,7 @@ const Courses = () => {
       if (data) {
         const localStorageData = JSON.parse(localStorage.getItem('user'))
         axios({
-          url: `http://localhost:4000/v1/courses/${courseID}`,
+          url: import.meta.env.VITE_API_URL +`/v1/courses/${courseID}`,
           method: 'DELETE',
           headers: {
             Authorization: `Bearer ${localStorageData.token}`,
@@ -124,7 +124,7 @@ const Courses = () => {
   const addNewCourse = (e) => {
     e.preventDefault()
     axios({
-      url: 'http://localhost:4000/v1/courses',
+      url: import.meta.env.VITE_API_URL +'/v1/courses',
       method: 'POST',
       headers: {
         Authorization: `Bearer ${
@@ -179,7 +179,7 @@ const Courses = () => {
               value={form.values.title}
               type="text"
               id="first_name"
-              className="block border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-2.5 border focus:border-blue-500 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:placeholder-gray-400 dark:text-white"
+              className="block bg-gray-50 dark:bg-gray-700 p-2.5 border border-gray-300 focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:text-white dark:placeholder-gray-400"
               placeholder="نام دوره را وارد نمایید..."
               required
               style={{ height: '35px', fontSize: '12px' }}
@@ -201,7 +201,7 @@ const Courses = () => {
               value={form.values.desc}
               type="text"
               id="last_name"
-              className="block border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-2.5 border focus:border-blue-500 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:placeholder-gray-400 dark:text-white"
+              className="block bg-gray-50 dark:bg-gray-700 p-2.5 border border-gray-300 focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:text-white dark:placeholder-gray-400"
               placeholder="توضیحات محصول را وارد نمایید..."
               required
               style={{ height: '35px', fontSize: '12px' }}
@@ -224,7 +224,7 @@ const Courses = () => {
               value={form.values.href}
               type="text"
               id="last_name"
-              className="block border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-2.5 border focus:border-blue-500 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:placeholder-gray-400 dark:text-white"
+              className="block bg-gray-50 dark:bg-gray-700 p-2.5 border border-gray-300 focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:text-white dark:placeholder-gray-400"
               placeholder="لینک دوره را وارد نمایید..."
               required
               style={{ height: '35px', fontSize: '12px' }}
@@ -247,7 +247,7 @@ const Courses = () => {
               value={form.values.price}
               type="text"
               id="last_name"
-              className="block border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-2.5 border focus:border-blue-500 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:placeholder-gray-400 dark:text-white"
+              className="block bg-gray-50 dark:bg-gray-700 p-2.5 border border-gray-300 focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:text-white dark:placeholder-gray-400"
               placeholder="قیمت دوره را وارد نمایید..."
               required
               style={{ height: '35px', fontSize: '12px' }}
@@ -269,7 +269,7 @@ const Courses = () => {
               value={form.values.support}
               type="text"
               id="last_name"
-              className="block border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-2.5 border focus:border-blue-500 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:placeholder-gray-400 dark:text-white"
+              className="block bg-gray-50 dark:bg-gray-700 p-2.5 border border-gray-300 focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:text-white dark:placeholder-gray-400"
               placeholder="نحوه پشتیبانی را وارد نمایید..."
               required
               style={{ height: '35px', fontSize: '12px' }}
@@ -290,7 +290,7 @@ const Courses = () => {
               onClick={(e) => setSelectMenu(e.target.value)}
               defaultValue="-1"
               style={{ height: '35px', fontSize: '12px' }}
-              className="block border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-2.5 border focus:border-blue-500 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:placeholder-gray-400 dark:text-white"
+              className="block bg-gray-50 dark:bg-gray-700 p-2.5 border border-gray-300 focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:text-white dark:placeholder-gray-400"
             >
               <option selected value="-1">
                 منوی اصلی را انتخاب نمایید
@@ -315,7 +315,7 @@ const Courses = () => {
               عکس دوره
             </label>
             <div className="flex justify-center items-center w-full">
-              <label className="flex flex-col justify-center items-center border-2 border-gray-300 dark:hover:border-gray-500 dark:border-gray-600 bg-gray-50 dark:hover:bg-bray-800 hover:bg-gray-100 dark:hover:bg-gray-600 dark:bg-gray-700 border-dashed rounded-lg w-full h-40 cursor-pointer">
+              <label className="flex flex-col justify-center items-center bg-gray-50 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-bray-800 dark:hover:bg-gray-600 border-2 border-gray-300 dark:border-gray-600 dark:hover:border-gray-500 border-dashed rounded-lg w-full h-40 cursor-pointer">
                 <div className="flex flex-col justify-center items-center pt-5 pb-6">
                   <svg
                     className="mb-4 w-8 h-8 text-gray-500 dark:text-gray-400"
@@ -336,7 +336,7 @@ const Courses = () => {
                     <span className="font-semibold">Click to upload</span> or
                     drag and drop
                   </p>
-                  <p className="text-gray-500 text-xs dark:text-gray-400">
+                  <p className="text-gray-500 dark:text-gray-400 text-xs">
                     SVG, PNG, JPG or GIF (MAX. 800x400px)
                   </p>
                 </div>
@@ -378,7 +378,7 @@ const Courses = () => {
                 onChange={form.handleChange}
                 onBlur={form.handleBlur}
                 id="default-radio-1"
-                className="border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 focus:ring-blue-500 dark:focus:ring-blue-600 focus:ring-2 dark:ring-offset-gray-800 w-4 h-4 text-blue-600"
+                className="bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 w-4 h-4 text-blue-600"
               />
 
               <label className="ml-2 pr-4 font-medium text-gray-900 text-xlg dark:text-gray-300">
@@ -394,7 +394,7 @@ const Courses = () => {
                 id="default-radio-2"
                 onBlur={form.handleBlur}
                 value=" presell"
-                className="border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 focus:ring-blue-500 dark:focus:ring-blue-600 focus:ring-2 dark:ring-offset-gray-800 w-4 h-4 text-blue-600"
+                className="bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 w-4 h-4 text-blue-600"
               />
 
               <label className="ml-2 pr-4 font-medium text-gray-900 text-xlg dark:text-gray-300">
@@ -432,8 +432,8 @@ const Courses = () => {
         className="relative shadow-md mt-10 mr-20 sm:rounded-lg overflow-x-auto"
         style={{ width: '90%', borderRadius: '20px' }}
       >
-        <table className="w-full text-gray-500 text-left text-xlg dark:text-gray-400">
-          <thead className="text-right bg-purple-100 dark:bg-gray-700 text-gray-700 text-xlg dark:text-gray-400 uppercase">
+        <table className="w-full text-gray-500 text-xlg dark:text-gray-400 text-left">
+          <thead className="bg-purple-100 dark:bg-gray-700 text-gray-700 text-xlg dark:text-gray-400 text-right uppercase">
             <tr>
               <th scope="col" className="px-6 py-3">
                 شناسه
@@ -470,7 +470,7 @@ const Courses = () => {
               return (
                 <tr
                   key={course._id}
-                  className="dark:border-gray-700 bg-white dark:bg-gray-800 border-b"
+                  className="bg-white dark:bg-gray-800 dark:border-gray-700 border-b"
                 >
                   <th
                     scope="row"

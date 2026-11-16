@@ -15,7 +15,7 @@ const CourseAllInfo = () => {
 
   useEffect(() => {
     axios({
-      url: `http://localhost:4000/v1/courses/${courseName}`,
+      url: import.meta.env.VITE_API_URL + `/v1/courses/${courseName}`,
     }).then((data) => {
       console.log('getSingleCourse:', data.data)
       setGetSingleCourseData(data.data)
@@ -75,7 +75,7 @@ const CourseAllInfo = () => {
                 <button
                   type="button"
                   style={{ color: 'black' }}
-                  className="flex justify-between items-center border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 p-5 border border-b-0 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 w-full font-medium text-gray-500 text-left dark:text-gray-400"
+                  className="flex justify-between items-center hover:bg-gray-100 dark:hover:bg-gray-800 p-5 border border-gray-200 dark:border-gray-700 border-b-0 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 w-full font-medium text-gray-500 dark:text-gray-400 text-left"
                   data-accordion-target="#accordion-collapse-body-1"
                   aria-expanded="true"
                   aria-controls="accordion-collapse-body-1"
@@ -105,7 +105,7 @@ const CourseAllInfo = () => {
                 className="hidden"
                 aria-labelledby="accordion-collapse-heading-1"
               >
-                <div className="border-gray-200 dark:border-gray-700 dark:bg-gray-900 p-5 border border-b-0">
+                <div className="dark:bg-gray-900 p-5 border border-gray-200 dark:border-gray-700 border-b-0">
                   {sessions.map((session, index) => {
                     return session.free === 1 ||
                       getSingleCourseData.isUserRegisteredToThisCourse ===
