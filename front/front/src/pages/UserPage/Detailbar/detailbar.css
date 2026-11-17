@@ -1,0 +1,36 @@
+.welcome-account{
+    margin: 0px 30px;
+}
+.welcome-account h1{
+    padding-bottom: 20px;
+}
+
+.welcome-account p{
+    padding-bottom: 20px;
+}
+.info-box{
+    box-shadow: rgba(182, 146, 233, 0.8) 0px 5px 15px;
+    padding: 20px 27px;
+    margin: 10px 63px;
+     border-radius: 5px;
+     text-align: center;
+
+     
+     
+
+}
+.info-box:hover{
+    background-color: #8d65ff;
+    color: white;
+   
+}
+.info-box a:hover{
+    color: white;
+}
+
+/* .col-md-4.info-box{
+    width: 27.3%;
+} */
+.account-name{
+    color: var(--primary-color);
+}
