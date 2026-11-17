@@ -1,0 +1,35 @@
+.contact-form {
+  width: 56%;
+  height: auto;
+  display: flex;
+  /* border: 1px solid purple; */
+  margin: 40px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(116, 67, 255, 0.25) 0px 54px 55px,
+    rgba(116, 67, 255, 0.12) 0px -12px 30px,
+    rgba(116, 67, 255, 0.12) 0px 4px 6px, rgba(116, 67, 255, 0.17) 0px 12px 13px,
+    rgba(116, 67, 255, 0.09) 0px -3px 5px;
+}
+.contact-form-right {
+  width: 45%;
+}
+.contact-form-right img {
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+}
+
+.fform {
+  width: 100%;
+}
+.contact-form-left {
+  width: 80%;
+  margin: 0 20px;
+}
+
+.contact-info h1 {
+  text-align: center;
+  padding: 10px 0 5px 0;
+  font-size: 20px;
+}
