@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useContext } from 'react'
 
-import './OrderDetail.css'
+import './orderDetail.css'
 import AuthContext from '../../../context/Context'
 
 const OrderDetail = () => {
@@ -61,7 +61,7 @@ const OrderDetail = () => {
             </table>
 
             <div>
-              <button className="bttn-2 table-btn">سفارش دوباره</button>
+              <button className="table-btn bttn-2">سفارش دوباره</button>
             </div>
 
             <div>
