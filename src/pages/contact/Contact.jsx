@@ -64,7 +64,7 @@ const Contact = () => {
   const contactHandler = (e) => {
     e.preventDefault()
     axios({
-      url: 'http://localhost:4000/v1/contact',
+      url: import.meta.env.VITE_API_URL + '/v1/contact',
       method: 'POST',
       data: {
         name: form.values.name,

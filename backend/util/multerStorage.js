@@ -1,10 +1,12 @@
+const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const multer = require('multer');
+const uploadDir = require('./uploadDir');
 
 module.exports = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, path.join(__dirname, '..', 'public', 'courses', 'covers'));
+    fs.mkdir(uploadDir, { recursive: true }, (error) => cb(error, uploadDir));
   },
   filename: (req, file, cb) => {
     const sha256 = crypto.createHash('SHA256');

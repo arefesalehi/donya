@@ -40,7 +40,7 @@ const CourseComment = () => {
   const sendComment = (e) => {
     e.preventDefault()
     axios({
-      url: 'http://localhost:4000/v1/comments',
+      url: import.meta.env.VITE_API_URL + '/v1/comments',
       method: 'POST',
       headers: {
         Authorization: `Bearer ${

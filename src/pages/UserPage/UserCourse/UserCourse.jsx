@@ -9,7 +9,7 @@ const UserCourse = () => {
 
   useEffect(() => {
     axios({
-      url: 'http://localhost:4000/v1/users/courses',
+      url: import.meta.env.VITE_API_URL + '/v1/users/courses',
       headers: {
         Authorization: `Bearer ${
           JSON.parse(localStorage.getItem('user')).token

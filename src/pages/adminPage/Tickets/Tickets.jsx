@@ -14,7 +14,7 @@ const Tickets = () => {
   const getAllTicket = () => {
     const localStorageData = JSON.parse(localStorage.getItem('user'))
     axios({
-      url: 'http://localhost:4000/v1/tickets',
+      url: import.meta.env.VITE_API_URL + '/v1/tickets',
       headers: {
         Authorization: `Bearer ${localStorageData.token}`,
       },

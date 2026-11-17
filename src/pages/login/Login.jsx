@@ -53,7 +53,7 @@ const Login = () => {
   const userLogin = (e) => {
     e.preventDefault()
     axios({
-      url: 'http://localhost:4000/v1/auth/login',
+      url: import.meta.env.VITE_API_URL + '/v1/auth/login',
       method: 'POST',
       data: {
         identifier: form.values.name,

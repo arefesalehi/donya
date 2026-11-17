@@ -27,7 +27,7 @@ const register = () => {
     e.preventDefault()
 
     axios({
-      url: 'http://localhost:4000/v1/auth/register',
+      url: import.meta.env.VITE_API_URL + '/v1/auth/register',
       method: 'POST',
       data: {
         name: form.values.name,

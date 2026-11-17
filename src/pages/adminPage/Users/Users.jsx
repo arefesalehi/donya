@@ -78,7 +78,7 @@ const Users = () => {
     const localStorageData = JSON.parse(localStorage.getItem('user'))
 
     axios({
-      url: 'http://localhost:4000/v1/users',
+      url: import.meta.env.VITE_API_URL + '/v1/users',
       headers: {
         Authorization: `Bearer ${localStorageData.token}`,
       },
@@ -147,7 +147,7 @@ const Users = () => {
   const addNewUser = async (e) => {
     e.preventDefault()
     await axios({
-      url: 'http://localhost:4000/v1/auth/register',
+      url: import.meta.env.VITE_API_URL + '/v1/auth/register',
       method: 'POST',
       data: {
         name: form.values.name,
@@ -187,7 +187,7 @@ const Users = () => {
       if (data.length) {
         const localStorageData = JSON.parse(localStorage.getItem('user'))
         axios({
-          url: 'http://localhost:4000/v1/users/role',
+          url: import.meta.env.VITE_API_URL + '/v1/users/role',
           method: 'PUT',
           data: {
             role: data,

@@ -9,7 +9,7 @@ const UserOrders = () => {
 
   useEffect(() => {
     axios({
-      url: 'http://localhost:4000/v1/orders',
+      url: import.meta.env.VITE_API_URL + '/v1/orders',
       headers: {
         Authorization: `Bearer ${
           JSON.parse(localStorage.getItem('user')).token

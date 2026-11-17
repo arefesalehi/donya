@@ -69,7 +69,7 @@ const UserPanelEdit = () => {
   const editUserPanel = (e) => {
     e.preventDefault()
     axios({
-      url: 'http://localhost:4000/v1/users',
+      url: import.meta.env.VITE_API_URL + '/v1/users',
       method: 'PUT',
       headers: {
         Authorization: `Bearer ${

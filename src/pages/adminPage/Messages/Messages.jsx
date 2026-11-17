@@ -65,7 +65,7 @@ const Messages = () => {
       if (data.length) {
         const localStorageData = JSON.parse(localStorage.getItem('user'))
         axios({
-          url: 'http://localhost:4000/v1/contact/answer',
+          url: import.meta.env.VITE_API_URL + '/v1/contact/answer',
           method: 'POST',
           headers: {
             Authorization: `Bearer ${localStorageData.token}`,

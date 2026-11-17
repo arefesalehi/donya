@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const articleModel = require("../../models/article");
+const uploadDir = require("../../util/uploadDir");
 
 exports.create = async (req, res, next) => {
   try {
@@ -115,15 +116,7 @@ exports.remove = async (req, res, next) => {
       return res.status(404).json({ message: "Article Not Found!" });
     }
 
-    const imgPath = path.join(
-      __dirname,
-      "..",
-      "..",
-      "public",
-      "courses",
-      "covers",
-      deletedArticle.cover
-    );
+    const imgPath = path.join(uploadDir, deletedArticle.cover);
     fs.unlink(imgPath, async (err) => {
       if (err) {
         console.log(err);

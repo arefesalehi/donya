@@ -15,7 +15,7 @@ const Offs = () => {
 
   const getAllCourse = () => {
     axios({
-      url: 'http://localhost:4000/v1/courses',
+      url: import.meta.env.VITE_API_URL + '/v1/courses',
     }).then((data) => {
       console.log('all Course:', data.data)
       setCourses(data.data)
@@ -24,7 +24,7 @@ const Offs = () => {
 
   const getAllOff = () => {
     axios({
-      url: 'http://localhost:4000/v1/offs',
+      url: import.meta.env.VITE_API_URL + '/v1/offs',
       headers: {
         Authorization: `Bearer ${
           JSON.parse(localStorage.getItem('user')).token
@@ -106,7 +106,7 @@ const Offs = () => {
 
   const createOff = () => {
     axios({
-      url: 'http://localhost:4000/v1/offs',
+      url: import.meta.env.VITE_API_URL + '/v1/offs',
       method: 'POST',
       headers: {
         Authorization: `Bearer ${

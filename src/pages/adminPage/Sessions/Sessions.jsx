@@ -12,7 +12,7 @@ const Sessions = () => {
   useEffect(() => {
     getAllSession()
     axios({
-      url: 'http://localhost:4000/v1/courses',
+      url: import.meta.env.VITE_API_URL + '/v1/courses',
     }).then((data) => {
       console.log('all Course:', data.data)
       setAllCourse(data.data)
@@ -21,7 +21,7 @@ const Sessions = () => {
 
   const getAllSession = () => {
     axios({
-      url: 'http://localhost:4000/v1/courses/sessions',
+      url: import.meta.env.VITE_API_URL + '/v1/courses/sessions',
     }).then((data) => {
       console.log('sessions:', data.data)
       setSessions(data.data)

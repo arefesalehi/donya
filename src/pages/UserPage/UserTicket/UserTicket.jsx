@@ -8,7 +8,7 @@ const UserTicket = () => {
   const [allTickets, setAllTickets] = useState([])
   useEffect(() => {
     axios({
-      url: 'http://localhost:4000/v1/tickets',
+      url: import.meta.env.VITE_API_URL + '/v1/tickets',
       headers: {
         Authorization: `Bearer ${
           JSON.parse(localStorage.getItem('user')).token

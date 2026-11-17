@@ -10,7 +10,7 @@ const Ticket = () => {
 
   useEffect(() => {
     axios({
-      url: 'http://localhost:4000/v1/tickets/departments',
+      url: import.meta.env.VITE_API_URL + '/v1/tickets/departments',
     }).then((data) => {
       console.log('department:', data.data)
       setDepartment(data.data)
@@ -29,7 +29,7 @@ const Ticket = () => {
   const sendTicket = (e) => {
     e.preventDefault()
     axios({
-      url: 'http://localhost:4000/v1/tickets',
+      url: import.meta.env.VITE_API_URL + '/v1/tickets',
       method: 'POST',
       headers: {
         Authorization: `Bearer ${

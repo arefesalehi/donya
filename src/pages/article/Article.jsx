@@ -36,7 +36,7 @@ const Article = () => {
 
   useEffect(() => {
     axios({
-      url: 'http://localhost:4000/v1/courses',
+      url: import.meta.env.VITE_API_URL + '/v1/courses',
     }).then((data) => {
       console.log('all Course:', data.data)
       setAllCourses(data.data)

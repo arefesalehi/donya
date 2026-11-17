@@ -13,7 +13,7 @@ const CourseSupport = () => {
 
   useEffect(() => {
     axios({
-      url: 'http://localhost:4000/v1/infos/index',
+      url: import.meta.env.VITE_API_URL + '/v1/infos/index',
     }).then((data) => setInfos(data.data))
   }, [])
 

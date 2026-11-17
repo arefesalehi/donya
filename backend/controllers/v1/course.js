@@ -6,6 +6,7 @@ const sessionModel = require("../../models/session");
 const commentModel = require("../../models/comment");
 const categoryModel = require("../../models/category");
 const courseUserModel = require("../../models/course-user");
+const uploadDir = require("../../util/uploadDir");
 
 exports.create = async (req, res, next) => {
   try {
@@ -111,15 +112,7 @@ exports.update = async (req, res, next) => {
       .populate("creator", "-password");
 
     if (oldCourse.cover !== newCourse.cover) {
-      const imgPath = path.join(
-        __dirname,
-        "..",
-        "..",
-        "public",
-        "courses",
-        "covers",
-        oldCourse.cover
-      );
+      const imgPath = path.join(uploadDir, oldCourse.cover);
 
       fs.unlink(imgPath, async (err) => {
         if (err) {
@@ -422,15 +415,7 @@ exports.removeSession = async (req, res, next) => {
       return res.status(404).json({ message: "Session Not Found!" });
     }
 
-    const videoPath = path.join(
-      __dirname,
-      "..",
-      "..",
-      "public",
-      "courses",
-      "covers",
-      deletedSession.video
-    );
+    const videoPath = path.join(uploadDir, deletedSession.video);
     fs.unlink(videoPath, async (err) => {
       if (err) {
         console.log(err);

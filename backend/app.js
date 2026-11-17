@@ -1,4 +1,5 @@
 const path = require("path");
+const uploadDir = require("./util/uploadDir");
 const express = require("express");
 const { setHeaders } = require("./middlewares/headers");
 const { errorHandler } = require("./middlewares/errors");
@@ -30,6 +31,7 @@ app.use(express.json({ limit: "50mb" }));
 app.use(setHeaders);
 
 //* Static Folder
+app.use("/courses/covers", express.static(uploadDir));
 app.use(express.static(path.join(__dirname, "public")));
 
 
