@@ -15,7 +15,7 @@ const CourseAllInfo = () => {
 
   useEffect(() => {
     axios({
-      url: import.meta.env.VITE_API_URL +`/v1/courses/${courseName}`,
+      url: import.meta.env.VITE_API_URL + `/v1/courses/${courseName}`,
     }).then((data) => {
       console.log('getSingleCourse:', data.data)
       setGetSingleCourseData(data.data)

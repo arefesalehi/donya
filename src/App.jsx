@@ -32,7 +32,7 @@ const App = () => {
 
     if (localStorageData) {
       axios({
-        url: 'http://localhost:4000/v1/auth/me',
+        url: import.meta.env.VITE_API_URL +'/v1/auth/me',
         headers: {
           Authorization: `Bearer ${localStorageData.token}`,
         },

@@ -77,7 +77,7 @@ const Courses = () => {
 
   const getAllCategory = () => {
     axios({
-      url: 'http://localhost:4000/v1/category',
+      url: import.meta.env.VITE_API_URL +'/v1/category',
     }).then((data) => {
       console.log('allcategory:', data.data)
       setCategories(data.data)
@@ -86,7 +86,7 @@ const Courses = () => {
 
   const getAllCourse = () => {
     axios({
-      url: 'http://localhost:4000/v1/courses',
+      url: import.meta.env.VITE_API_URL +'/v1/courses',
     }).then((data) => {
       console.log('allcourse:', data.data)
       setAllCourse(data.data)
@@ -124,7 +124,7 @@ const Courses = () => {
   const addNewCourse = (e) => {
     e.preventDefault()
     axios({
-      url: 'http://localhost:4000/v1/courses',
+      url: import.meta.env.VITE_API_URL +'/v1/courses',
       method: 'POST',
       headers: {
         Authorization: `Bearer ${

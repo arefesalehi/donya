@@ -13,7 +13,7 @@ const Messages = () => {
 
   const getAllMessage = () => {
     axios({
-      url: 'http://localhost:4000/v1/contact',
+      url: import.meta.env.VITE_API_URL + '/v1/contact',
     }).then((data) => {
       console.log('messages:', data.data)
       setMessages(data.data)
@@ -36,7 +36,7 @@ const Messages = () => {
       if (data) {
         const localStorageData = JSON.parse(localStorage.getItem('user'))
         axios({
-          url: import.meta.env.VITE_API_URL +`/v1/contact/${messageID}`,
+          url: import.meta.env.VITE_API_URL + `/v1/contact/${messageID}`,
           method: 'DELETE',
           headers: {
             Authorization: `Bearer ${localStorageData.token}`,

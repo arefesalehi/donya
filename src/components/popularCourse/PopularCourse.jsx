@@ -12,7 +12,7 @@ const PopularCourse = () => {
 
   useEffect(() => {
     axios({
-      url: 'http://localhost:4000/v1/courses/popular',
+      url: import.meta.env.VITE_API_URL +'/v1/courses/popular',
     }).then((data) => {
       console.log('popular course :', data.data)
       setPopularCourse(data.data)
@@ -23,7 +23,7 @@ const PopularCourse = () => {
     <>
       <HeadingTitle title="محبوب ترین دوره ها" />
 
-      <div className="container  ">
+      <div className="container">
         <Swiper
           slidesPerView={4}
           spaceBetween={30}
@@ -31,10 +31,10 @@ const PopularCourse = () => {
             clickable: true,
           }}
           loop={true}
-          className="mySwiper  container  flex justify-center  "
+          className="flex justify-center mySwiper container"
           style={{ width: '93%', marginBottom: '30px', height: '400px' }}
         >
-          <div className="grid grid-cols-3 gap-4">
+          <div className="gap-4 grid grid-cols-3">
             {popularCourse.map((popular) => {
               return (
                 <SwiperSlide key={popular._id}>
