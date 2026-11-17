@@ -12,7 +12,7 @@ const PresellCourse = () => {
 
   useEffect(() => {
     axios({
-      url: 'http://localhost:4000/v1/courses/presell',
+      url: import.meta.env.VITE_API_URL +'/v1/courses/presell',
     }).then((data) => {
       console.log('presell course:', data.data)
       setPresellCourse(data.data)

@@ -16,7 +16,7 @@ const Menus = () => {
 
   const getAllMenu = () => {
     axios({
-      url: 'http://localhost:4000/v1/menus/all',
+      url: import.meta.env.VITE_API_URL +'/v1/menus/all',
     }).then((data) => {
       console.log('allmenues:', data.data)
       setAllMenues(data.data)
@@ -55,7 +55,7 @@ const Menus = () => {
     e.preventDefault()
     const localStorageData = JSON.parse(localStorage.getItem('user'))
     axios({
-      url: 'http://localhost:4000/v1/menus/',
+      url: import.meta.env.VITE_API_URL +'/v1/menus/',
       method: 'POST',
       headers: {
         Authorization: `Bearer ${localStorageData.token}`,

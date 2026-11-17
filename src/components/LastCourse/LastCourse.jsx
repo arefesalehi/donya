@@ -7,7 +7,7 @@ const LastCourse = () => {
   const [lastCourses, setlastCourse] = useState([])
   useEffect(() => {
     axios({
-      url: 'http://localhost:4000/v1/courses',
+      url: import.meta.env.VITE_API_URL +'/v1/courses',
     }).then((data) => {
       console.log('lastcourse:', data.data)
       setlastCourse(data.data)

@@ -31,7 +31,7 @@ const Discount = () => {
     const localStorageData = JSON.parse(localStorage.getItem('user'))
 
     axios({
-      url: 'http://localhost:4000/v1/offs/all',
+      url: import.meta.env.VITE_API_URL +'/v1/offs/all',
       method: 'POST',
       headers: {
         Authorization: `Bearer ${localStorageData.token}`,
@@ -72,7 +72,7 @@ const Discount = () => {
             <input
               type="text"
               id="first_name"
-              className="block border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-2.5 border focus:border-blue-500 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:placeholder-gray-400 dark:text-white"
+              className="block bg-gray-50 dark:bg-gray-700 p-2.5 border border-gray-300 focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 text-xlg dark:text-white dark:placeholder-gray-400"
               placeholder="کد تخفیف  را وارد نمایید..."
               required
               style={{ height: '35px', fontSize: '12px' }}

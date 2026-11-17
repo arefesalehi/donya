@@ -12,7 +12,7 @@ const AdminTopbar = () => {
   useEffect(() => {
     const localStorageData = JSON.parse(localStorage.getItem('user'))
     axios({
-      url: 'http://localhost:4000/v1/infos/p-admin',
+      url: import.meta.env.VITE_API_URL +'/v1/infos/p-admin',
       headers: { Authorization: `Bearer ${localStorageData.token}` },
     }).then((data) => {
       console.log('infos:', data.data)
@@ -46,7 +46,7 @@ const AdminTopbar = () => {
   useEffect(() => {
     const localStorageData = JSON.parse(localStorage.getItem('user'))
     axios({
-      url: 'http://localhost:4000/v1/auth/me',
+      url: import.meta.env.VITE_API_URL +'/v1/auth/me',
       headers: {
         Authorization: `Bearer ${localStorageData.token}`,
       },

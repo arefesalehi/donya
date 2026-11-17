@@ -33,7 +33,7 @@ const Footer = () => {
   const createNewsLetter = (e) => {
     e.preventDefault()
     axios({
-      url: 'http://localhost:4000/v1/newsletters',
+      url: import.meta.env.VITE_API_URL +'/v1/newsletters',
       method: 'POST',
       data: {
         email: form.values.email,
@@ -53,7 +53,7 @@ const Footer = () => {
   return (
     <>
       <div className="container">
-        <div className="footer grid grid-cols-4 gap-4 myfooter mt-[10px]">
+        <div className="gap-4 grid grid-cols-4 mt-[10px] footer myfooter">
           <div className="coulmn1">
             <h1>درباره ما </h1>
             <p>

@@ -13,7 +13,7 @@ export default memo(function Topbar() {
   useEffect(() => {
     try {
       axios
-        .get('http://localhost:4000/v1/menus/topbar')
+        .get(import.meta.env.VITE_API_URL +'/v1/menus/topbar')
 
         .then((data) => {
           console.log(data.data)
@@ -26,7 +26,7 @@ export default memo(function Topbar() {
 
   useEffect(() => {
     axios({
-      url: 'http://localhost:4000/v1/infos/index',
+      url: import.meta.env.VITE_API_URL +'/v1/infos/index',
     }).then((data) => {
       console.log('infos:', data.data)
       setInfos(data.data)
