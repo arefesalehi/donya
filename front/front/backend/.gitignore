@@ -1,6 +1,14 @@
 node_modules
 public
 .env
+<<<<<<< HEAD
 .DS_Store
 *.rar
 *.zip
+=======
+!.env.example
+dist/
+build/
+.DS_Store
+dist
+>>>>>>> f52928fe8deec50b72398188bd43a3d6f7ad3e48

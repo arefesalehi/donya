@@ -1,0 +1,15 @@
+.myIcon-noanswer {
+  color: red;
+}
+
+.myIcon-yesanswer {
+  color: var(--primary-color);
+}
+
+.no-answer {
+  color: red;
+}
+
+.yes-answer {
+  color: green;
+}
