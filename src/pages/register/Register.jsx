@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import './register.css'
+import './Register.css'
 import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import {
@@ -175,7 +175,7 @@ const register = () => {
               onBlur={form.handleBlur}
               placeholder="نام و نام خانوادگی"
               id="large-input"
-              className="block border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-4 border focus:border-blue-500 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 sm:text-md dark:placeholder-gray-400 dark:text-white"
+              className="block bg-gray-50 dark:bg-gray-700 p-4 border border-gray-300 focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 sm:text-md dark:text-white dark:placeholder-gray-400"
             />
             {form.errors.name && form.touched.name && (
               <p style={{ color: 'red', textAlign: 'center' }}>
@@ -200,7 +200,7 @@ const register = () => {
               onBlur={form.handleBlur}
               placeholder="نام کاربری"
               id="large-input"
-              className="block border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-4 border focus:border-blue-500 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 sm:text-md dark:placeholder-gray-400 dark:text-white"
+              className="block bg-gray-50 dark:bg-gray-700 p-4 border border-gray-300 focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 sm:text-md dark:text-white dark:placeholder-gray-400"
             />
             {form.errors.username && form.touched.username && (
               <p style={{ color: 'red', textAlign: 'center' }}>
@@ -225,7 +225,7 @@ const register = () => {
               onBlur={form.handleBlur}
               placeholder="    ادرس ایمیل"
               id="large-input"
-              className="block border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-4 border focus:border-blue-500 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 sm:text-md dark:placeholder-gray-400 dark:text-white"
+              className="block bg-gray-50 dark:bg-gray-700 p-4 border border-gray-300 focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 sm:text-md dark:text-white dark:placeholder-gray-400"
             />
             {form.errors.email && form.touched.email && (
               <p style={{ color: 'red', textAlign: 'center' }}>
@@ -250,7 +250,7 @@ const register = () => {
               onBlur={form.handleBlur}
               placeholder="تلفن همراه"
               id="large-input"
-              className="block border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-4 border focus:border-blue-500 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 sm:text-md dark:placeholder-gray-400 dark:text-white"
+              className="block bg-gray-50 dark:bg-gray-700 p-4 border border-gray-300 focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 sm:text-md dark:text-white dark:placeholder-gray-400"
             />
             {form.errors.phone && form.touched.phone && (
               <p style={{ color: 'red', textAlign: 'center' }}>
@@ -274,7 +274,7 @@ const register = () => {
               onBlur={form.handleBlur}
               placeholder="رمز عبور"
               id="large-input"
-              className="block border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-4 border focus:border-blue-500 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 sm:text-md dark:placeholder-gray-400 dark:text-white"
+              className="block bg-gray-50 dark:bg-gray-700 p-4 border border-gray-300 focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 sm:text-md dark:text-white dark:placeholder-gray-400"
             />
             {form.errors.password && form.touched.password && (
               <p style={{ color: 'red', textAlign: 'center' }}>
@@ -298,7 +298,7 @@ const register = () => {
               onBlur={form.handleBlur}
               placeholder="تکرار رمز  عبور"
               id="large-input"
-              className="block border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-4 border focus:border-blue-500 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 sm:text-md dark:placeholder-gray-400 dark:text-white"
+              className="block bg-gray-50 dark:bg-gray-700 p-4 border border-gray-300 focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 dark:focus:ring-blue-500 w-full text-gray-900 sm:text-md dark:text-white dark:placeholder-gray-400"
             />
             {form.errors.repeatPassword && form.touched.repeatPassword && (
               <p style={{ color: 'red', textAlign: 'center' }}>
