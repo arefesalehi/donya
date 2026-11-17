@@ -26,7 +26,7 @@ import { useState, useEffect } from 'react'
 import { FaUserGraduate } from 'react-icons/fa'
 import axios from 'axios'
 import swal from 'sweetalert'
-import LeftSide from '../../components/leftSideOfCourse/leftSide'
+import LeftSide from '../../components/leftSideOfCourse/LeftSide'
 
 const Course = () => {
   const [getSingleCourseData, setGetSingleCourseData] = useState([])
