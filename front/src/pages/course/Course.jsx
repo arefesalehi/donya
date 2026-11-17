@@ -36,11 +36,7 @@ const Course = () => {
   const navigate = useNavigate()
   useEffect(() => {
     axios({
-<<<<<<< HEAD
-      url: import.meta.env.VITE_API_URL +`/v1/courses/${courseName}`,
-=======
       url: import.meta.env.VITE_API_URL + `/v1/courses/${courseName}`,
->>>>>>> 4ae8772989cbe4fae749cf4792d421b933028fcb
     }).then((data) => {
       console.log('getSingleCourse:', data.data)
       setGetSingleCourseData(data.data)
@@ -60,13 +56,9 @@ const Course = () => {
         console.log(data)
         if (data) {
           axios({
-<<<<<<< HEAD
-            url: import.meta.env.VITE_API_URL +`/v1/courses/${course._id}/register`,
-=======
             url:
               import.meta.env.VITE_API_URL +
               `/v1/courses/${course._id}/register`,
->>>>>>> 4ae8772989cbe4fae749cf4792d421b933028fcb
             method: 'POST',
             headers: {
               Authorization: `Bearer ${

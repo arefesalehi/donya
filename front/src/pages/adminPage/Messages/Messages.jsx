@@ -36,11 +36,7 @@ const Messages = () => {
       if (data) {
         const localStorageData = JSON.parse(localStorage.getItem('user'))
         axios({
-<<<<<<< HEAD
-          url: import.meta.env.VITE_API_URL +`/v1/contact/${messageID}`,
-=======
           url: import.meta.env.VITE_API_URL + `/v1/contact/${messageID}`,
->>>>>>> 4ae8772989cbe4fae749cf4792d421b933028fcb
           method: 'DELETE',
           headers: {
             Authorization: `Bearer ${localStorageData.token}`,
